@@ -1,8 +1,19 @@
 @charset "UTF-8";
 
-.Main {
-    background-image: url(../image/hexagons-gb1bbffb5f_1920.jpg);
-    min-height: 100vh;
+video {
+position: fixed;
+top: 0;
+left: 0;
+}
+
+#main {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    width: 50%;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
 }
 
 
