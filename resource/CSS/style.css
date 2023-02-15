@@ -1,3 +1,5 @@
+@import url('https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
+
 body { padding: 0px; margin: 0px; }
 
 .main {
@@ -14,17 +16,21 @@ video {
 
 #clock {
     position: absolute;
-    top: 50%;
+    top: 40%;
     width: 100%;
+    text-align: center;
 }
 
 span {
-    margin-top: -80px;
+    margin-top: -24px;
+    font-size: 100px;
     margin-left: 50px;
-    text-align: center;
-    font-size: 48px;
-    color: red;
+    color: mintcream;
+    font-family: 'Galmuri14';
 }
+
+
+
 
 
 
