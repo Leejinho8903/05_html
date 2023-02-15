@@ -1,3 +1,5 @@
+body { padding: 0px; margin: 0px; }
+
 .main {
     position: relative;
     width: 100%;
@@ -5,22 +7,23 @@
     overflow: hidden;
     margin: 0px auto;
 }
-#video1 {
+video {
     width: 100%;
     height: auto;
 }
 
-.clock {
+#clock {
     position: absolute;
     top: 50%;
     width: 100%;
 }
 
 span {
-    margin-top: -24px;
+    margin-top: -80px;
+    margin-left: 50px;
     text-align: center;
     font-size: 48px;
-    color: #ffffff;
+    color: red;
 }
 
 

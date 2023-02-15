@@ -9,7 +9,7 @@
     <body>
         <div class="main">
             <video muted autoplay loop>
-                <source id="video1" src="../resource/image_video/homepage.mp4" type="video/mp4">
+                <source src="../resource/image_video/homepage.mp4" type="video/mp4">
             </video>
             <div id="clock">
                 <span class="hour">hh</span>:<span class="min">mm</span>:<span class="sec">ss</span>
@@ -17,24 +17,24 @@
         </div>
         <script>
             let timer;
-            function start() {
-            let now = new Date(); // 현재 시간 객체
-            let hours = now.getHours().toString().padStart(2, '0'); // 시간
-            let minutes = now.getMinutes().toString().padStart(2, '0'); // 분
-            let seconds = now.getSeconds().toString().padStart(2, '0'); // 초
-            let time = hours + ':' + minutes + ':' + seconds; // hh:mm:ss 형식으로 조합
+        const clock = document.querySelector("#clock");
 
-            let hourSpan = document.querySelector('#clock .hour'); // 시간 표시용 span 요소
-            let minSpan = document.querySelector('#clock .min'); // 분 표시용 span 요소
-            let secSpan = document.querySelector('#clock .sec'); // 초 표시용 span 요소
-
-            hourSpan.innerHTML = hours; // 시간 표시
-            minSpan.innerHTML = minutes; // 분 표시
-            secSpan.innerHTML = seconds; // 초 표시
-
-            timer = setTimeout(start, 1000); // 1초마다 반복
+        function start(){
+            if(!timer){
+                timer = setInterval(update, 1000);
+                update();
             }
-            start();
+        }
+        function update(){
+			let date = new Date();
+            let hour = date.getHours();
+            let min = date.getMinutes();
+            let sec = date.getSeconds();
+			clock.children[0].textContent = hour < 10 ? '0' + hour : hour;
+            clock.children[1].textContent = min < 10 ? '0' + min : min;
+			clock.children[2].textContent = sec < 10 ? '0' + sec : sec;
+		}
+        start(); update();
         </script>
     </body>
 </html>
